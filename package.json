@@ -1,0 +1,22 @@
+{
+  "name": "804",
+  "version": "1.0.0",
+  "description": "Tools for human optimization",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/will-hanlen/804.git"
+  },
+  "author": "804",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/will-hanlen/804/issues"
+  },
+  "homepage": "https://804.dev",
+  "dependencies": {
+    "vercel": "^20.1.0"
+  }
+}
