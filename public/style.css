@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
 
 /* ---- Primitives ---- */
@@ -10,7 +10,7 @@ html {
   /* Colors */
   --fg: #111111;
   --bg: #FDFAFE;
-  --ac: #aa33ee;
+  --ac: #8833ee;
 
   /* Base Unit */
   --base: 4px;
