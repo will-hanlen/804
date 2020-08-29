@@ -1,0 +1,156 @@
+
+
+
+/* ---- Primitives ---- */
+
+
+
+html {
+
+  /* Colors */
+  --fg: #111111;
+  --bg: #FDFAFE;
+  --ac: #aa33ee;
+
+  /* Base Unit */
+  --base: 4px;
+
+  /* Font Sizes */
+  --XL: calc(10 * var(--base));
+  --L:  calc(7 * var(--base));
+  --M:  calc(5 * var(--base));
+  --S:  calc(4 * var(--base));
+
+
+  /* Spacing */
+  --pad: calc(6 * var(--base));
+
+
+  /* Cards */
+  --radius: calc(3 * var(--base));
+  --border: calc(2 * var(--base));
+
+  /* Actionables */
+  --glow: 0 0 var(--base) var(--base) var(--ac);
+
+}
+
+/* Desktop Responsiveness */
+@media (min-width: 1000px) {
+  html {
+    --base: 5px;
+  }
+}
+
+
+
+/* ---- Resets ---- */
+
+
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* ---- Components ---- */
+
+
+
+/* Spacing */
+
+h1, h2, p, img, .card {
+  display: block;
+  padding-bottom: var(--pad);
+}
+
+.pt {
+  padding-top: var(--pad);
+}
+
+
+/* Body */
+
+body {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+
+  padding: var(--pad) 0;
+
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+
+/* Logo */
+
+img#logo {
+  width: calc(35 * var(--base));
+  display: block;
+  margin: auto;
+}
+
+
+/* Typography */
+
+h1 {
+  font-size: var(--XL);
+  line-height: 120%;
+
+
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ac);
+}
+
+
+h2 {
+  font-size: var(--L);
+  line-height: 120%;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button {
+  font-size: var(--M);
+}
+
+p {
+  font-size: var(--S);
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+
+p.big {
+  font-size: var(--M);
+}
+
+p a {
+  color: var(--ac);
+  text-decoration: none;
+}
+
+.centered, .center {
+  text-align: center;
+}
+
+
+/* Cards */
+
+.card {
+  border: var(--border) solid var(--ac);
+  border-radius: var(--radius);
+  padding: var(--pad);
+
+  width: 100%;
+  box-sizing: border-box;
+  margin: calc(12 * var(--base)) 0;
+}
+
+
