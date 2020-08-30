@@ -4,7 +4,7 @@
   "description": "Tools for human optimization",
   "main": "index.js",
   "scripts": {
-    "build": "echo hi"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
