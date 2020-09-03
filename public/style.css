@@ -24,11 +24,12 @@ html {
 
   /* Spacing */
   --pad: calc(6 * var(--base));
+  --pad-half: calc(var(--pad) / 2);
 
 
   /* Cards */
   --radius: calc(3 * var(--base));
-  --border: calc(2 * var(--base));
+  --border: calc(1 * var(--base));
 
   /* Actionables */
   --glow: 0 0 var(--base) var(--base) var(--ac);
@@ -36,7 +37,7 @@ html {
 }
 
 /* Desktop Responsiveness */
-@media (min-width: 1000px) {
+@media (min-width: 750px) {
   html {
     --base: 5px;
   }
@@ -48,9 +49,13 @@ html {
 
 
 
-body, h1, h2, p {
+body, h1, h2, h3, p {
   margin: 0;
   padding: 0;
+}
+
+ul, ol {
+  margin: 0;
 }
 
 
@@ -61,13 +66,31 @@ body, h1, h2, p {
 
 /* Spacing */
 
-h1, h2, p, img, .card {
+h1, h2, p, img, .card, ul, ol {
   display: block;
   padding-bottom: var(--pad);
 }
 
+h3 {
+  padding-bottom: var(--pad-half);
+}
+
 .pt {
   padding-top: var(--pad);
+}
+
+section#apps {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: calc(-1 * var(--pad-half));
+}
+
+section#blog {
+
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
 }
 
 
@@ -75,16 +98,24 @@ h1, h2, p, img, .card {
 
 body {
   width: 90%;
-  max-width: 700px;
+  max-width: 900px;
   margin: auto;
 
   padding: var(--pad) 0;
+  margin-bottom: 30vh;
 
   font-family: 'DM Sans', sans-serif;
+  font-size: var(--S);
+  letter-spacing: 0.05em;
   background-color: var(--bg);
   color: var(--fg);
 }
 
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+}
 
 /* Logo */
 
@@ -92,6 +123,23 @@ img#logo {
   width: calc(35 * var(--base));
   display: block;
   margin: auto;
+}
+
+img#logo.small {
+  width: calc(25 * var(--base));
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  padding: 0 0 0 var(--pad);
+  line-height: 100%;
 }
 
 
@@ -113,8 +161,26 @@ h2 {
   font-size: var(--L);
   line-height: 120%;
 
+
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
+  padding-top: calc(var(--pad));
+  padding-bottom: calc(2 * var(--pad));
+}
+
+article {
+  max-width: 680px;
+  width: 90%;
+  margin: auto;
+}
+
+h3 {
+  font-size: var(--M);
+  line-height: 120%;
+
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 .button {
@@ -124,15 +190,15 @@ h2 {
 p {
   font-size: var(--S);
   line-height: 150%;
-  letter-spacing: 1px;
 }
 
 p.big {
   font-size: var(--M);
 }
 
-p a {
+a {
   color: var(--ac);
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -144,13 +210,49 @@ p a {
 /* Cards */
 
 .card {
+  display: block;
   border: var(--border) solid var(--ac);
   border-radius: var(--radius);
   padding: var(--pad);
 
-  width: 100%;
+  min-width: 300px;
+  max-width: 50%;
+  flex-grow: 1;
+  flex-basis: 40%;
   box-sizing: border-box;
-  margin: calc(12 * var(--base)) 0;
+  margin-bottom: var(--pad);
+  margin: var(--pad-half);
+}
+
+.card p:last-child {
+  padding-bottom: 0;
 }
 
 
+/* Unorderd Lists */
+
+ul.clean {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.clean li {
+  padding-bottom: var(--pad-half);
+}
+
+ul.clean li:last-child {
+  padding-bottom: 0;
+}
+
+
+/* Horizontal Rule */
+
+hr {
+  display: block;
+  width: 100%;
+  height: var(--base);
+  background-color: var(--ac);
+  margin-top: var(--pad);
+  margin-bottom: calc(2 * var(--pad));
+  border-radius: var(--pad);
+}

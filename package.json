@@ -17,6 +17,8 @@
   },
   "homepage": "https://804.dev",
   "dependencies": {
+    "handlebars": "^4.7.6",
+    "markdown-it": "^11.0.0",
     "vercel": "^20.1.0"
   }
 }

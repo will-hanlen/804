@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="assets/favicon.png" type="image/ico" sizes="16x16">
+
+  <title>804 DEV</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <header>
+    <img id="logo" class="small pt" alt="804 DEV logo" src="assets/logo.svg"/>
+    <h1>804<br>dev</h1>
+  </header>
+  <p class="center">Tools for human optimization.</p>
+
+
+  <!-- This section isn't ready yet!
+
+  <section id="apps">
+
+    <h2>Apps</h2>
+
+    <a href="#" class="card">
+      <p class="big">Capsulate</p>
+      <p>A simple photo journaling app.</p>
+    </a>
+
+    <a href="#" class="card">
+      <p class="big">Notion EPUB</p>
+      <p>A tool for uploading and reading books in Notion.</p>
+    </a>
+
+  </section>
+
+  -->
+
+  <section id="blog">
+    <h2>Blog</h2>
+
+
+      <ul class="clean">
+
+      {{#each essay}}
+
+        <li>
+          <a href="blog/{{this.file}}">{{this.title}}.</a>
+          {{this.description}}
+        </li>
+
+      {{/each}}
+
+      </ul>
+
+
+  </section>
+
+
+</body>
+</html>
